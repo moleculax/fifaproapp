@@ -1,0 +1,146 @@
+[
+  {
+    "name": "Argentina",
+    "flag": "🇦🇷",
+    "crest": "https://flagcdn.com/w320/ar.png",
+    "fifa": "ARG"
+  },
+  {
+    "name": "Brasil",
+    "flag": "🇧🇷",
+    "crest": "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg",
+    "fifa": "BRA"
+  },
+  {
+    "name": "Uruguay",
+    "flag": "🇺🇾",
+    "crest": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Uruguay.svg",
+    "fifa": "URU"
+  },
+  {
+    "name": "Colombia",
+    "flag": "🇨🇴",
+    "crest": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg",
+    "fifa": "COL"
+  },
+  {
+    "name": "Estados Unidos",
+    "flag": "🇺🇸",
+    "crest": "https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+    "fifa": "USA"
+  },
+  {
+    "name": "México",
+    "flag": "🇲🇽",
+    "crest": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg",
+    "fifa": "MEX"
+  },
+  {
+    "name": "Canadá",
+    "flag": "🇨🇦",
+    "crest": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Canada.svg",
+    "fifa": "CAN"
+  },
+  {
+    "name": "España",
+    "flag": "🇪🇸",
+    "crest": "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg",
+    "fifa": "ESP"
+  },
+  {
+    "name": "Francia",
+    "flag": "🇫🇷",
+    "crest": "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
+    "fifa": "FRA"
+  },
+  {
+    "name": "Alemania",
+    "flag": "🇩🇪",
+    "crest": "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
+    "fifa": "GER"
+  },
+  {
+    "name": "Portugal",
+    "flag": "🇵🇹",
+    "crest": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg",
+    "fifa": "POR"
+  },
+  {
+    "name": "Inglaterra",
+    "flag": "🏴",
+    "crest": "https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg",
+    "fifa": "ENG"
+  },
+  {
+    "name": "Italia",
+    "flag": "🇮🇹",
+    "crest": "https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg",
+    "fifa": "ITA"
+  },
+  {
+    "name": "Países Bajos",
+    "flag": "🇳🇱",
+    "crest": "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg",
+    "fifa": "NED"
+  },
+  {
+    "name": "Croacia",
+    "flag": "🇭🇷",
+    "crest": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg",
+    "fifa": "CRO"
+  },
+  {
+    "name": "Japón",
+    "flag": "🇯🇵",
+    "crest": "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg",
+    "fifa": "JPN"
+  },
+  {
+    "name": "Corea del Sur",
+    "flag": "🇰🇷",
+    "crest": "https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg",
+    "fifa": "KOR"
+  },
+  {
+    "name": "Australia",
+    "flag": "🇦🇺",
+    "crest": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Flag_of_Australia.svg",
+    "fifa": "AUS"
+  },
+  {
+    "name": "Marruecos",
+    "flag": "🇲🇦",
+    "crest": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg",
+    "fifa": "MAR"
+  },
+  {
+    "name": "Senegal",
+    "flag": "🇸🇳",
+    "crest": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Flag_of_Senegal.svg",
+    "fifa": "SEN"
+  },
+  {
+    "name": "Egipto",
+    "flag": "🇪🇬",
+    "crest": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg",
+    "fifa": "EGY"
+  },
+  {
+    "name": "Nigeria",
+    "flag": "🇳🇬",
+    "crest": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg",
+    "fifa": "NGA"
+  },
+  {
+    "name": "Costa de Marfil",
+    "flag": "🇨🇮",
+    "crest": "https://flagcdn.com/w320/ci.png",
+    "fifa": "CIV"
+  },
+  {
+    "name": "Arabia Saudita",
+    "flag": "🇸🇦",
+    "crest": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg",
+    "fifa": "KSA"
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "grupo": "A",
+    "seleccion": [
+      { "pais": "Mexico", "fifa": "MEX", "flag": "🇲🇽", "confederation": "CONCACAF" },
+      { "pais": "South Africa", "fifa": "RSA", "flag": "🇿🇦", "confederation": "CAF" },
+      { "pais": "South Korea", "fifa": "KOR", "flag": "🇰🇷", "confederation": "AFC" },
+      { "pais": "Playoff UEFA D", "fifa": "P-UED", "flag": "🏳️", "confederation": "UEFA", "note": "Equipo por definirse" }
+    ]
+  },
+  {
+    "grupo": "B",
+    "seleccion": [
+      { "pais": "Canada", "fifa": "CAN", "flag": "🇨🇦", "confederation": "CONCACAF" },
+      { "pais": "Playoff UEFA A", "fifa": "P-UEA", "flag": "🏳️", "confederation": "UEFA", "note": "Equipo por definirse" },
+      { "pais": "Qatar", "fifa": "QAT", "flag": "🇶🇦", "confederation": "AFC" },
+      { "pais": "Switzerland", "fifa": "SUI", "flag": "🇨🇭", "confederation": "UEFA" }
+    ]
+  },
+  {
+    "grupo": "C",
+    "seleccion": [
+      { "pais": "Brazil", "fifa": "BRA", "flag": "🇧🇷", "confederation": "CONMEBOL" },
+      { "pais": "Morocco", "fifa": "MAR", "flag": "🇲🇦", "confederation": "CAF" },
+      { "pais": "Haiti", "fifa": "HAI", "flag": "🇭🇹", "confederation": "CONCACAF" },
+      { "pais": "Scotland", "fifa": "SCO", "flag": "🏴", "confederation": "UEFA" }
+    ]
+  },
+  {
+    "grupo": "D",
+    "seleccion": [
+      { "pais": "United States", "fifa": "USA", "flag": "🇺🇸", "confederation": "CONCACAF" },
+      { "pais": "Paraguay", "fifa": "PAR", "flag": "🇵🇾", "confederation": "CONMEBOL" },
+      { "pais": "Australia", "fifa": "AUS", "flag": "🇦🇺", "confederation": "AFC" },
+      { "pais": "Playoff UEFA C", "fifa": "P-UEC", "flag": "🏳️", "confederation": "UEFA", "note": "Equipo por definirse" }
+    ]
+  },
+  {
+    "grupo": "E",
+    "seleccion": [
+      { "pais": "Germany", "fifa": "GER", "flag": "🇩🇪", "confederation": "UEFA" },
+      { "pais": "Curacao", "fifa": "CUW", "flag": "🇨🇼", "confederation": "CONCACAF" },
+      { "pais": "Ivory Coast", "fifa": "CIV", "flag": "🇨🇮", "confederation": "CAF" },
+      { "pais": "Ecuador", "fifa": "ECU", "flag": "🇪🇨", "confederation": "CONMEBOL" }
+    ]
+  },
+  {
+    "grupo": "F",
+    "seleccion": [
+      { "pais": "Netherlands", "fifa": "NED", "flag": "🇳🇱", "confederation": "UEFA" },
+      { "pais": "Japan", "fifa": "JPN", "flag": "🇯🇵", "confederation": "AFC" },
+      { "pais": "Playoff UEFA B", "fifa": "P-UEB", "flag": "🏳️", "confederation": "UEFA", "note": "Equipo por definirse" },
+      { "pais": "Tunisia", "fifa": "TUN", "flag": "🇹🇳", "confederation": "CAF" }
+    ]
+  },
+  {
+    "grupo": "G",
+    "seleccion": [
+      { "pais": "Belgium", "fifa": "BEL", "flag": "🇧🇪", "confederation": "UEFA" },
+      { "pais": "Iran", "fifa": "IRN", "flag": "🇮🇷", "confederation": "AFC" },
+      { "pais": "Egypt", "fifa": "EGY", "flag": "🇪🇬", "confederation": "CAF" },
+      { "pais": "New Zealand", "fifa": "NZL", "flag": "🇳🇿", "confederation": "OFC" }
+    ]
+  },
+  {
+    "grupo": "H",
+    "seleccion": [
+      { "pais": "Spain", "fifa": "ESP", "flag": "🇪🇸", "confederation": "UEFA" },
+      { "pais": "Cape Verde", "fifa": "CPV", "flag": "🇨🇻", "confederation": "CAF" },
+      { "pais": "Saudi Arabia", "fifa": "KSA", "flag": "🇸🇦", "confederation": "AFC" },
+      { "pais": "Uruguay", "fifa": "URU", "flag": "🇺🇾", "confederation": "CONMEBOL" }
+    ]
+  },
+  {
+    "grupo": "I",
+    "seleccion": [
+      { "pais": "France", "fifa": "FRA", "flag": "🇫🇷", "confederation": "UEFA" },
+      { "pais": "Senegal", "fifa": "SEN", "flag": "🇸🇳", "confederation": "CAF" },
+      { "pais": "Norway", "fifa": "NOR", "flag": "🇳🇴", "confederation": "UEFA" },
+      { "pais": "Playoff Interconfederation 1", "fifa": "P-INT1", "flag": "🏳️", "confederation": "Mixed", "note": "Equipo por definirse" }
+    ]
+  },
+  {
+    "grupo": "J",
+    "seleccion": [
+      { "pais": "Argentina", "fifa": "ARG", "fifa_rank": "", "flag": "🇦🇷", "confederation": "CONMEBOL" },
+      { "pais": "Algeria", "fifa": "ALG", "flag": "🇩🇿", "confederation": "CAF" },
+      { "pais": "Austria", "fifa": "AUT", "flag": "🇦🇹", "confederation": "UEFA" },
+      { "pais": "Jordan", "fifa": "JOR", "flag": "🇯🇴", "confederation": "AFC" }
+    ]
+  },
+  {
+    "grupo": "K",
+    "seleccion": [
+      { "pais": "Portugal", "fifa": "POR", "flag": "🇵🇹", "confederation": "UEFA" },
+      { "pais": "Colombia", "fifa": "COL", "flag": "🇨🇴", "confederation": "CONMEBOL" },
+      { "pais": "Uzbekistan", "fifa": "UZB", "flag": "🇺🇿", "confederation": "AFC" },
+      { "pais": "Playoff Interconfederation 2", "fifa": "P-INT2", "flag": "🏳️", "confederation": "Mixed", "note": "Equipo por definirse" }
+    ]
+  },
+  {
+    "grupo": "L",
+    "seleccion": [
+      { "pais": "England", "fifa": "ENG", "flag": "🏴", "confederation": "UEFA" },
+      { "pais": "Croatia", "fifa": "CRO", "flag": "🇭🇷", "confederation": "UEFA" },
+      { "pais": "Ghana", "fifa": "GHA", "flag": "🇬🇭", "confederation": "CAF" },
+      { "pais": "Panama", "fifa": "PAN", "flag": "🇵🇦", "confederation": "CONCACAF" }
+    ]
+  }
+]

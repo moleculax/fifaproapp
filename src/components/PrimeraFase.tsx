@@ -1,25 +1,25 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Tab2.css';
+import PrimeraFaseDeGrupo from '../components/PrimeraFaseDeGrupo';
+import '../pages/FaseUno.css';
 
-const Tab2: React.FC = () => {
+const PrimeraFase: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
+          <IonTitle>Primera Fase de Grupos</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
+            <IonTitle size="large">Primera fase De Grupo</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+        <PrimeraFaseDeGrupo name="Primera_Fase" />
       </IonContent>
     </IonPage>
   );
 };
 
-export default Tab2;
+export default PrimeraFase;
