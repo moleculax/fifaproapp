@@ -10,6 +10,10 @@ export default defineConfig({
     react(),
     legacy()
   ],
+    build: {
+        outDir: 'dist',              // carpeta de salida para Vercel
+        chunkSizeWarningLimit: 1000  // evita warnings de tamaño > 500kb
+    },
   test: {
     globals: true,
     environment: 'jsdom',
