@@ -43,6 +43,11 @@ npx cap open ios
 
 ```
 
+Despliegue en:
+Autor
+
+👉 [https://fifaproapp.vercel.app/](https://fifaproapp.vercel.app/)
+
 Autor
 Proyecto creado por Emilio (Moleculax)
 👉 [https://moleculaxapp.vercel.ap](https://moleculaxapp.vercel.app/)
