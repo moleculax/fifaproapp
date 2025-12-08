@@ -28,3 +28,10 @@ ion-content {
     margin: 0;
     font-weight: 500;
 }
+
+.franja-blanca {
+    background: white;
+    padding: 16px 0;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
