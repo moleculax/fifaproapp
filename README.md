@@ -8,7 +8,7 @@ Incluye fases de grupos, selecciones clasificadas, estadísticas y visualizació
 ##  Características principales
 
 - **Visualización de grupos**: cada grupo se muestra en cards con banderas, país, código FIFA y confederación.
--  **Datos dinámicos**: carga de información desde archivos JSON (`GruposPrimeraFase.json`).
+-  **Datos dinámicos**: carga de información desde archivos JSON.
 - **Diseño responsivo**: interfaz adaptada para móviles, tablets y desktop.
 -  **Bootstrap integrado**: cards corporativas y estilos consistentes.
 - **Ionic Capacitor**: soporte para emuladores Android/iOS y despliegue nativo.
