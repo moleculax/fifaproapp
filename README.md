@@ -7,12 +7,12 @@ Incluye fases de grupos, selecciones clasificadas, estadísticas y visualizació
 
 ##  Características principales
 
-- 📊 **Visualización de grupos**: cada grupo se muestra en cards con banderas, país, código FIFA y confederación.
-- 🌐 **Datos dinámicos**: carga de información desde archivos JSON (`GruposPrimeraFase.json`).
-- 📱 **Diseño responsivo**: interfaz adaptada para móviles, tablets y desktop.
-- 🎨 **Bootstrap integrado**: cards corporativas y estilos consistentes.
-- ⚡ **Ionic Capacitor**: soporte para emuladores Android/iOS y despliegue nativo.
-- 🔍 **Logs y depuración**: consola con trazas de carga de datos para debugging.
+- **Visualización de grupos**: cada grupo se muestra en cards con banderas, país, código FIFA y confederación.
+-  **Datos dinámicos**: carga de información desde archivos JSON (`GruposPrimeraFase.json`).
+- **Diseño responsivo**: interfaz adaptada para móviles, tablets y desktop.
+-  **Bootstrap integrado**: cards corporativas y estilos consistentes.
+- **Ionic Capacitor**: soporte para emuladores Android/iOS y despliegue nativo.
+- **Logs y depuración**: consola con trazas de carga de datos para debugging.
 
 ---
 
@@ -20,8 +20,8 @@ Incluye fases de grupos, selecciones clasificadas, estadísticas y visualizació
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/munfifapro.git
-   cd munfifapro
+   git clone https://github.com/moleculax/fifaproapp.git
+   cd fifaproapp
 
 ```bash
     npm install
@@ -44,7 +44,6 @@ npx cap open ios
 ```
 
 Despliegue en:
-Autor
 
 👉 [https://fifaproapp.vercel.app/](https://fifaproapp.vercel.app/)
 
@@ -52,4 +51,4 @@ Autor
 Proyecto creado por Emilio (Moleculax)
 👉 [https://moleculaxapp.vercel.ap](https://moleculaxapp.vercel.app/)
 
- Visión: integrar tecnología, educación, neurociencia y filosofía en productos digitales con benchmarking internacional. 
+ Visión: integrar tecnología, educación, neurociencia y filosofía en productos digitales. 
