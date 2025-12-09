@@ -1,6 +1,6 @@
-# 🌍 Munfifapro – Mundial 2026 App
+# Fifapro –  2026 App
 
-Aplicación desarrollada con **Ionic + React + Capacitor** para visualizar y gestionar toda la información del Mundial FIFA 2026.  
+Aplicación desarrollada con **Ionic + React + Capacitor** para visualizar y gestionar toda la información del Mundial  2026.  
 Incluye fases de grupos, selecciones clasificadas, estadísticas y visualización en cards responsivas.
 
 ---
