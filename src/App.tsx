@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import {ellipse, square, statsChart, triangle} from 'ionicons/icons';
 import Home from './pages/Home';
 import PageClasificadosMundial from './components/PageClasificadosMundial';
 import PrimeraFase from './components/PrimeraFase';
@@ -44,6 +44,9 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import EstadisticasClasificados from "./components/EstadisticasClasificados";
+
+
 
 setupIonicReact();
 
@@ -64,6 +67,13 @@ const App: React.FC = () => (
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
+            <Route exact path="/estadisticas">
+                <EstadisticasClasificados />
+            </Route>
+
+
+
+
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/home">
@@ -78,6 +88,15 @@ const App: React.FC = () => (
             <IonIcon aria-hidden="true" icon={square} />
             <IonLabel>Primera fase</IonLabel>
           </IonTabButton>
+
+            <IonTabButton tab="estadisticas" href="/estadisticas">
+
+                <IonIcon aria-hidden="true" icon={statsChart} />
+                <IonLabel>Estadísticas</IonLabel>
+            </IonTabButton>
+
+
+
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>

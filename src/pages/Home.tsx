@@ -1,11 +1,17 @@
-import { IonContent, IonHeader, IonPage
+import {
+    IonContent, IonHeader, IonPage
     , IonTitle, IonToolbar, IonImg
     , IonButton, IonGrid
     , IonRow, IonCol, IonCard
     , IonCardHeader
-    , IonCardTitle, IonCardContent, useIonRouter } from '@ionic/react';
-// import '../css/Home.css';
+    , IonCardTitle, IonCardContent, useIonRouter, IonIcon
+} from '@ionic/react';
+
 import "../css/Home.css";
+import {logoIonic} from "ionicons/icons";
+
+
+// HASTA AQUI LOS import
 const Home: React.FC = () => {
 
     const router = useIonRouter();
@@ -19,9 +25,10 @@ const Home: React.FC = () => {
             {/* HEADER PRINCIPAL */}
             <IonHeader>
                 <IonToolbar color="primary">
-                    <IonTitle className="ion-text-center font-bold tracking-wide">
-                        Mundial 2026
+                    <IonTitle className="ion-text-center font-bold text-white  tracking-wide">
+                        FifaProApp 2026
                     </IonTitle>
+
                 </IonToolbar>
             </IonHeader>
 
