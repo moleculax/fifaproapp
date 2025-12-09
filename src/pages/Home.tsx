@@ -4,8 +4,8 @@ import { IonContent, IonHeader, IonPage
     , IonRow, IonCol, IonCard
     , IonCardHeader
     , IonCardTitle, IonCardContent, useIonRouter } from '@ionic/react';
-import './Home.css';
-
+// import '../css/Home.css';
+import "../css/Home.css";
 const Home: React.FC = () => {
 
     const router = useIonRouter();

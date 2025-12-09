@@ -1,7 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import PrimeraFaseDeGrupo from '../components/PrimeraFaseDeGrupo';
-import '../pages/FaseUno.css';
-
+// import '../pages/FaseUno.css';
+import "../css/FaseUno.css"
 const PrimeraFase: React.FC = () => {
   return (
     <IonPage>

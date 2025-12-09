@@ -1,4 +1,4 @@
-import './ExploreContainer.css';
+import '../css/ExploreContainer.css';
 import React, { useEffect, useState } from 'react';
 import { IonContent, useIonViewDidEnter } from '@ionic/react';
 import { ContainerProps, PrimeraFaseDeGrupos } from './../models/ClasificadosMundial.models';
