@@ -1,4 +1,4 @@
-# Fifapro –  2026 App
+# Fifapro –  App
 
 Aplicación desarrollada con **Ionic + React + Capacitor** para visualizar y gestionar toda la información del Mundial  2026.  
 Incluye fases de grupos, selecciones clasificadas, estadísticas y visualización en cards responsivas.
@@ -8,7 +8,7 @@ Incluye fases de grupos, selecciones clasificadas, estadísticas y visualizació
 ##  Características principales
 
 - **Visualización de grupos**: cada grupo se muestra en cards con banderas, país, código FIFA y confederación.
--  **Datos dinámicos**: carga de información desde archivos JSON.
+ **Datos dinámicos**: carga de información desde archivos JSON.
 - **Diseño responsivo**: interfaz adaptada para móviles, tablets y desktop.
 -  **Bootstrap integrado**: cards corporativas y estilos consistentes.
 - **Ionic Capacitor**: soporte para emuladores Android/iOS y despliegue nativo.
@@ -45,10 +45,10 @@ npx cap open ios
 
 Despliegue en:
 
-👉 [https://fifaproapp.vercel.app/](https://fifaproapp.vercel.app/)
+ [https://fifaproapp.vercel.app/](https://fifaproapp.vercel.app/)
 
 Autor
-Proyecto creado por Emilio (Moleculax)
-👉 [https://moleculaxapp.vercel.ap](https://moleculaxapp.vercel.app/)
+(Moleculax)
+[https://moleculaxapp.vercel.ap](https://moleculaxapp.vercel.app/)
 
- Visión: integrar tecnología, educación, neurociencia y filosofía en productos digitales. 
+ 
