@@ -47,8 +47,7 @@ Despliegue en:
 
  [https://fifaproapp.vercel.app/](https://fifaproapp.vercel.app/)
 
-Autor
-(Moleculax)
+Autor (Moleculax):
 
 [https://moleculaxapp.vercel.ap](https://moleculaxapp.vercel.app/)
 
