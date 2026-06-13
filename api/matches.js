@@ -1,27 +1,47 @@
-const getMatches = async () => {
-    setLoading(true);
-    setError(null);
+import { NextResponse } from 'next/server';
 
+export const dynamic = 'force-dynamic';
+
+export async function GET() {
     try {
-        console.log('📡 Llamando a Football API');
-
-        const response = await axios.get('https://api.football-data.org/v4/matches', {
+        const response = await fetch('https://api.football-data.org/v4/matches', {
             headers: {
-                'X-Auth-Token': 'e0d17f658b2749a1971bb281c1b8a58a'   // ← Pon tu token real
-            }
+                'X-Auth-Token': 'e0d17f658b2749a1971bb281c1b8a58a',
+            },
         });
 
-        console.log('✅ Respuesta recibida:', response.data);
-
-        if (response.data?.matches) {
-            setMatches(response.data.matches);
-        } else {
-            setError('Formato de respuesta inválido');
+        if (!response.ok) {
+            return NextResponse.json(
+                { error: `Football API error: ${response.status}` },
+                { status: response.status }
+            );
         }
+
+        const data = await response.json();
+
+        return NextResponse.json(data, {
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, OPTIONS',
+                'Access-Control-Allow-Headers': 'X-Auth-Token, Content-Type',
+            },
+        });
     } catch (error) {
-        console.error('❌ Error:', error);
-        // ... manejo de errores igual que antes
-    } finally {
-        setLoading(false);
+        console.error('Proxy error:', error);
+        return NextResponse.json(
+            { error: 'Error al obtener los partidos' },
+            { status: 500 }
+        );
     }
-};
+}
+
+// Manejar preflight (OPTIONS)
+export async function OPTIONS() {
+    return NextResponse.json(null, {
+        headers: {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, OPTIONS',
+            'Access-Control-Allow-Headers': 'X-Auth-Token, Content-Type',
+        },
+    });
+}

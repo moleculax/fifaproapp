@@ -43,13 +43,10 @@ const WorldCupMatches: React.FC = () => {
         setError(null);
 
         try {
-            console.log('📡 Llamando a Football Data API');
+            console.log('📡 Llamando al proxy en Vercel');
 
-            const response = await axios.get('https://api.football-data.org/v4/matches', {
-                headers: {
-                    'X-Auth-Token': 'e0d17f658b2749a1971bb281c1b8a58a'
-                }
-            });
+            // ← Cambia esta URL si tu app en Vercel tiene otro nombre
+            const response = await axios.get('https://fifaproapp.vercel.app/api/matches');
 
             console.log('✅ Respuesta recibida:', response.data);
 
@@ -64,22 +61,20 @@ const WorldCupMatches: React.FC = () => {
             if (axios.isAxiosError(error)) {
                 if (error.response?.status === 429) {
                     setError('Límite de peticiones alcanzado. Intenta más tarde.');
-                } else if (error.response?.status === 401) {
-                    setError('Error de autenticación. Token inválido.');
-                } else if (error.response?.status === 403) {
-                    setError('Acceso denegado. Verifica tu token.');
+                } else if (error.response?.status === 401 || error.response?.status === 403) {
+                    setError('Error de autenticación con la API.');
                 } else {
-                    setError(`Error ${error.response?.status || 'desconocido'}: ${error.message}`);
+                    setError(`Error ${error.response?.status || 'desconocido'}`);
                 }
             } else {
-                setError('Error de conexión. Revisa tu internet.');
+                setError('Error de conexión. Revisa tu internet o intenta más tarde.');
             }
         } finally {
             setLoading(false);
         }
     };
 
-    // Refrescar al hacer pull-to-refresh
+    // Pull to refresh
     const handleRefresh = async (event: CustomEvent) => {
         await getMatches();
         event.detail.complete();
@@ -116,17 +111,26 @@ const WorldCupMatches: React.FC = () => {
                     <IonRefresherContent />
                 </IonRefresher>
 
-                {/* Estado de carga */}
+                {/* Cargando */}
                 {loading && (
-                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        height: '200px'
+                    }}>
                         <IonSpinner name="crescent" />
                         <IonText style={{ marginLeft: '10px' }}>Cargando partidos...</IonText>
                     </div>
                 )}
 
-                {/* Estado de error */}
+                {/* Error */}
                 {error && !loading && (
-                    <div style={{ textAlign: 'center', marginTop: '20px', padding: '16px' }}>
+                    <div style={{
+                        textAlign: 'center',
+                        marginTop: '20px',
+                        padding: '16px'
+                    }}>
                         <IonText color="danger">
                             <p>⚠️ {error}</p>
                         </IonText>
@@ -134,12 +138,13 @@ const WorldCupMatches: React.FC = () => {
                             onClick={getMatches}
                             style={{
                                 marginTop: '10px',
-                                padding: '8px 16px',
+                                padding: '10px 20px',
                                 backgroundColor: '#3880ff',
                                 color: 'white',
                                 border: 'none',
                                 borderRadius: '8px',
-                                cursor: 'pointer'
+                                cursor: 'pointer',
+                                fontSize: '16px'
                             }}
                         >
                             Reintentar
@@ -173,7 +178,7 @@ const WorldCupMatches: React.FC = () => {
                                             </strong>
                                         </p>
                                         {match.status && (
-                                            <p style={{ fontSize: '0.8rem', color: '#666' }}>
+                                            <p style={{ fontSize: '0.85rem', color: '#666' }}>
                                                 Estado: {match.status}
                                             </p>
                                         )}
