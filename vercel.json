@@ -1,10 +1,14 @@
 {
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/api/matches",
+      "destination": "/api/matches"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
   ]
 }
-
-
-
-

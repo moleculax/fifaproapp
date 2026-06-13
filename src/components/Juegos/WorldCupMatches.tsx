@@ -11,30 +11,26 @@ import {
     IonSpinner,
     IonText,
     IonRefresher,
-    IonRefresherContent,
-    IonBadge
+    IonRefresherContent
 } from '@ionic/react';
 import axios from 'axios';
 
-// ✅ Mover credenciales a variables de entorno
-const API_URL = import.meta.env.VITE_API_FOOTBALL_URL || 'https://api.football-data.org/v4/matches';
-const API_TOKEN = import.meta.env.VITE_API_FOOTBALL_TOKEN;
-
-// ✅ Headers fuera del componente
-const headers = { 'X-Auth-Token': API_TOKEN };
-
 interface Match {
     id: number;
-    homeTeam: { name: string };
-    awayTeam: { name: string };
-    score: {
-        fullTime: {
+    utcDate?: string;
+    status?: string;
+    homeTeam: {
+        name: string;
+    };
+    awayTeam: {
+        name: string;
+    };
+    score?: {
+        fullTime?: {
             home: number | null;
             away: number | null;
-        }
+        };
     };
-    status?: string;
-    utcDate?: string;
 }
 
 const WorldCupMatches: React.FC = () => {
@@ -47,54 +43,64 @@ const WorldCupMatches: React.FC = () => {
         setError(null);
 
         try {
-            const response = await axios.get(API_URL, { headers });
+            console.log('📡 Llamando a Football Data API');
 
-            // ✅ Validar estructura de respuesta
-            if (response.data && Array.isArray(response.data.matches)) {
+            const response = await axios.get('https://api.football-data.org/v4/matches', {
+                headers: {
+                    'X-Auth-Token': 'e0d17f658b2749a1971bb281c1b8a58a'
+                }
+            });
+
+            console.log('✅ Respuesta recibida:', response.data);
+
+            if (response.data?.matches && Array.isArray(response.data.matches)) {
                 setMatches(response.data.matches);
             } else {
-                throw new Error('Formato de respuesta inválido');
+                setError('No se encontraron partidos');
             }
+        } catch (error: any) {
+            console.error('❌ Error fetching matches:', error);
 
-        } catch (error) {
-            console.error('Error fetching matches:', error);
             if (axios.isAxiosError(error)) {
                 if (error.response?.status === 429) {
                     setError('Límite de peticiones alcanzado. Intenta más tarde.');
                 } else if (error.response?.status === 401) {
                     setError('Error de autenticación. Token inválido.');
+                } else if (error.response?.status === 403) {
+                    setError('Acceso denegado. Verifica tu token.');
                 } else {
-                    setError('Error al cargar los partidos. Intenta nuevamente.');
+                    setError(`Error ${error.response?.status || 'desconocido'}: ${error.message}`);
                 }
             } else {
-                setError('Error desconocido. Intenta nuevamente.');
+                setError('Error de conexión. Revisa tu internet.');
             }
         } finally {
             setLoading(false);
         }
     };
 
-    // ✅ Función para refrescar (pull-to-refresh)
+    // Refrescar al hacer pull-to-refresh
     const handleRefresh = async (event: CustomEvent) => {
         await getMatches();
         event.detail.complete();
     };
 
-    // ✅ Formatear fecha
+    useEffect(() => {
+        getMatches();
+    }, []);
+
+    // Formatear fecha
     const formatDate = (dateString?: string) => {
-        if (!dateString) return '';
+        if (!dateString) return 'Fecha no disponible';
         const date = new Date(dateString);
         return date.toLocaleDateString('es-ES', {
             day: '2-digit',
             month: '2-digit',
+            year: 'numeric',
             hour: '2-digit',
             minute: '2-digit'
         });
     };
-
-    useEffect(() => {
-        getMatches();
-    }, []);
 
     return (
         <IonPage>
@@ -112,7 +118,7 @@ const WorldCupMatches: React.FC = () => {
 
                 {/* Estado de carga */}
                 {loading && (
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
                         <IonSpinner name="crescent" />
                         <IonText style={{ marginLeft: '10px' }}>Cargando partidos...</IonText>
                     </div>
@@ -124,7 +130,18 @@ const WorldCupMatches: React.FC = () => {
                         <IonText color="danger">
                             <p>⚠️ {error}</p>
                         </IonText>
-                        <button onClick={getMatches} style={{ marginTop: '10px' }}>
+                        <button
+                            onClick={getMatches}
+                            style={{
+                                marginTop: '10px',
+                                padding: '8px 16px',
+                                backgroundColor: '#3880ff',
+                                color: 'white',
+                                border: 'none',
+                                borderRadius: '8px',
+                                cursor: 'pointer'
+                            }}
+                        >
                             Reintentar
                         </button>
                     </div>
@@ -136,15 +153,15 @@ const WorldCupMatches: React.FC = () => {
                         {matches.length === 0 ? (
                             <IonItem>
                                 <IonLabel className="ion-text-center">
-                                    No hay partidos disponibles
+                                    No hay partidos disponibles en este momento
                                 </IonLabel>
                             </IonItem>
                         ) : (
-                            matches.map(match => (
+                            matches.map((match) => (
                                 <IonItem key={match.id}>
                                     <IonLabel>
-                                        <h2>
-                                            {match.homeTeam.name} vs {match.awayTeam.name}
+                                        <h2 style={{ fontWeight: 'bold' }}>
+                                            {match.homeTeam?.name || '?'} vs {match.awayTeam?.name || '?'}
                                         </h2>
                                         <p>
                                             {match.utcDate && (
@@ -152,13 +169,13 @@ const WorldCupMatches: React.FC = () => {
                                             )}
                                             {' - '}
                                             <strong>
-                                                {match.score.fullTime.home ?? '?'} : {match.score.fullTime.away ?? '?'}
+                                                {match.score?.fullTime?.home ?? '?'} : {match.score?.fullTime?.away ?? '?'}
                                             </strong>
                                         </p>
                                         {match.status && (
-                                            <IonBadge color="medium" style={{ marginTop: '5px' }}>
-                                                {match.status}
-                                            </IonBadge>
+                                            <p style={{ fontSize: '0.8rem', color: '#666' }}>
+                                                Estado: {match.status}
+                                            </p>
                                         )}
                                     </IonLabel>
                                 </IonItem>
