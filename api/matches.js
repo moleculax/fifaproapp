@@ -1,8 +1,4 @@
-import { NextResponse } from 'next/server';
-
-export const dynamic = 'force-dynamic';
-
-export async function GET() {
+export default async function handler(req, res) {
     try {
         const response = await fetch('https://api.football-data.org/v4/matches', {
             headers: {
@@ -11,37 +7,23 @@ export async function GET() {
         });
 
         if (!response.ok) {
-            return NextResponse.json(
-                { error: `Football API error: ${response.status}` },
-                { status: response.status }
-            );
+            console.error(`Football API error: ${response.status}`);
+            return res.status(response.status).json({
+                error: `Error en API externa: ${response.status}`
+            });
         }
 
         const data = await response.json();
 
-        return NextResponse.json(data, {
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET, OPTIONS',
-                'Access-Control-Allow-Headers': 'X-Auth-Token, Content-Type',
-            },
-        });
-    } catch (error) {
-        console.error('Proxy error:', error);
-        return NextResponse.json(
-            { error: 'Error al obtener los partidos' },
-            { status: 500 }
-        );
-    }
-}
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'X-Auth-Token, Content-Type');
 
-// Manejar preflight (OPTIONS)
-export async function OPTIONS() {
-    return NextResponse.json(null, {
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET, OPTIONS',
-            'Access-Control-Allow-Headers': 'X-Auth-Token, Content-Type',
-        },
-    });
+        return res.status(200).json(data);
+    } catch (error) {
+        console.error('Proxy Error:', error);
+        return res.status(500).json({
+            error: 'Error interno del servidor'
+        });
+    }
 }

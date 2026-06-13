@@ -19,12 +19,8 @@ interface Match {
     id: number;
     utcDate?: string;
     status?: string;
-    homeTeam: {
-        name: string;
-    };
-    awayTeam: {
-        name: string;
-    };
+    homeTeam: { name: string };
+    awayTeam: { name: string };
     score?: {
         fullTime?: {
             home: number | null;
@@ -45,7 +41,6 @@ const WorldCupMatches: React.FC = () => {
         try {
             console.log('📡 Llamando al proxy en Vercel');
 
-            // ← Cambia esta URL si tu app en Vercel tiene otro nombre
             const response = await axios.get('https://fifaproapp.vercel.app/api/matches');
 
             console.log('✅ Respuesta recibida:', response.data);
@@ -58,23 +53,28 @@ const WorldCupMatches: React.FC = () => {
         } catch (error: any) {
             console.error('❌ Error fetching matches:', error);
 
-            if (axios.isAxiosError(error)) {
-                if (error.response?.status === 429) {
+            if (axios.isAxiosError(error) && error.response) {
+                const status = error.response.status;
+
+                if (status === 429) {
                     setError('Límite de peticiones alcanzado. Intenta más tarde.');
-                } else if (error.response?.status === 401 || error.response?.status === 403) {
+                } else if (status === 401 || status === 403) {
                     setError('Error de autenticación con la API.');
+                } else if (status >= 400 && status < 500) {
+                    setError(`Error del cliente (${status})`);
+                } else if (status >= 500) {
+                    setError('Error interno del servidor. Intenta más tarde.');
                 } else {
-                    setError(`Error ${error.response?.status || 'desconocido'}`);
+                    setError(`Error ${status}`);
                 }
             } else {
-                setError('Error de conexión. Revisa tu internet o intenta más tarde.');
+                setError('Error de conexión. Revisa tu internet e intenta nuevamente.');
             }
         } finally {
             setLoading(false);
         }
     };
 
-    // Pull to refresh
     const handleRefresh = async (event: CustomEvent) => {
         await getMatches();
         event.detail.complete();
@@ -84,7 +84,6 @@ const WorldCupMatches: React.FC = () => {
         getMatches();
     }, []);
 
-    // Formatear fecha
     const formatDate = (dateString?: string) => {
         if (!dateString) return 'Fecha no disponible';
         const date = new Date(dateString);
@@ -106,31 +105,19 @@ const WorldCupMatches: React.FC = () => {
             </IonHeader>
 
             <IonContent>
-                {/* Pull to refresh */}
                 <IonRefresher slot="fixed" onIonRefresh={handleRefresh}>
                     <IonRefresherContent />
                 </IonRefresher>
 
-                {/* Cargando */}
                 {loading && (
-                    <div style={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        height: '200px'
-                    }}>
+                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
                         <IonSpinner name="crescent" />
                         <IonText style={{ marginLeft: '10px' }}>Cargando partidos...</IonText>
                     </div>
                 )}
 
-                {/* Error */}
                 {error && !loading && (
-                    <div style={{
-                        textAlign: 'center',
-                        marginTop: '20px',
-                        padding: '16px'
-                    }}>
+                    <div style={{ textAlign: 'center', marginTop: '20px', padding: '16px' }}>
                         <IonText color="danger">
                             <p>⚠️ {error}</p>
                         </IonText>
@@ -143,8 +130,7 @@ const WorldCupMatches: React.FC = () => {
                                 color: 'white',
                                 border: 'none',
                                 borderRadius: '8px',
-                                cursor: 'pointer',
-                                fontSize: '16px'
+                                cursor: 'pointer'
                             }}
                         >
                             Reintentar
@@ -152,7 +138,6 @@ const WorldCupMatches: React.FC = () => {
                     </div>
                 )}
 
-                {/* Lista de partidos */}
                 {!loading && !error && (
                     <IonList>
                         {matches.length === 0 ? (
@@ -169,9 +154,7 @@ const WorldCupMatches: React.FC = () => {
                                             {match.homeTeam?.name || '?'} vs {match.awayTeam?.name || '?'}
                                         </h2>
                                         <p>
-                                            {match.utcDate && (
-                                                <span>📅 {formatDate(match.utcDate)}</span>
-                                            )}
+                                            {match.utcDate && <span>📅 {formatDate(match.utcDate)}</span>}
                                             {' - '}
                                             <strong>
                                                 {match.score?.fullTime?.home ?? '?'} : {match.score?.fullTime?.away ?? '?'}
