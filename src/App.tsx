@@ -45,6 +45,7 @@ import '@ionic/react/css/palettes/dark.system.css';
 /* Theme variables */
 import './theme/variables.css';
 import EstadisticasClasificados from "./components/EstadisticasClasificados";
+import WorldCupMatches from "./components/Juegos/WorldCupMatches";
 
 
 
@@ -61,6 +62,7 @@ const App: React.FC = () => (
           <Route exact path="/clasificados">
             <PageClasificadosMundial />
           </Route>
+
           <Route path="/primerafase">
             <PrimeraFase />
           </Route>
@@ -69,6 +71,10 @@ const App: React.FC = () => (
           </Route>
             <Route exact path="/estadisticas">
                 <EstadisticasClasificados />
+            </Route>
+
+            <Route exact path="/juegos">
+                <WorldCupMatches />
             </Route>
 
 
@@ -93,6 +99,12 @@ const App: React.FC = () => (
 
                 <IonIcon aria-hidden="true" icon={statsChart} />
                 <IonLabel>Estadísticas</IonLabel>
+            </IonTabButton>
+
+            <IonTabButton tab="juegos" href="/juegos">
+
+                <IonIcon aria-hidden="true" icon={statsChart} />
+                <IonLabel>Juegos</IonLabel>
             </IonTabButton>
 
 
