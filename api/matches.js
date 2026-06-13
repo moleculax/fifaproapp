@@ -7,23 +7,17 @@ export default async function handler(req, res) {
         });
 
         if (!response.ok) {
-            console.error(`Football API error: ${response.status}`);
-            return res.status(response.status).json({
-                error: `Error en API externa: ${response.status}`
-            });
+            return res.status(response.status).json({ error: `API Error: ${response.status}` });
         }
 
         const data = await response.json();
 
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
-        res.setHeader('Access-Control-Allow-Headers', 'X-Auth-Token, Content-Type');
 
         return res.status(200).json(data);
     } catch (error) {
         console.error('Proxy Error:', error);
-        return res.status(500).json({
-            error: 'Error interno del servidor'
-        });
+        return res.status(500).json({ error: 'Error interno del proxy' });
     }
 }
