@@ -63,9 +63,9 @@ const App: React.FC = () => (
             <PageClasificadosMundial />
           </Route>
 
-          <Route path="/primerafase">
-            <PrimeraFase />
-          </Route>
+          {/*<Route path="/primerafase">*/}
+          {/*  <PrimeraFase />*/}
+          {/*</Route>*/}
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
@@ -90,10 +90,10 @@ const App: React.FC = () => (
             <IonIcon aria-hidden="true" icon={ellipse} />
             <IonLabel>Clasificados</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/primerafase">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Primera fase</IonLabel>
-          </IonTabButton>
+          {/*<IonTabButton tab="tab3" href="/primerafase">*/}
+          {/*  <IonIcon aria-hidden="true" icon={square} />*/}
+          {/*  <IonLabel>Primera fase</IonLabel>*/}
+          {/*</IonTabButton>*/}
 
             <IonTabButton tab="estadisticas" href="/estadisticas">
 
