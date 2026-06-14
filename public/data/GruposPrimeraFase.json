@@ -5,14 +5,14 @@
       { "pais": "Mexico", "fifa": "MEX", "flag": "🇲🇽", "confederation": "CONCACAF" },
       { "pais": "South Africa", "fifa": "RSA", "flag": "🇿🇦", "confederation": "CAF" },
       { "pais": "South Korea", "fifa": "KOR", "flag": "🇰🇷", "confederation": "AFC" },
-      { "pais": "Playoff UEFA D", "fifa": "P-UED", "flag": "🏳️", "confederation": "UEFA", "note": "Equipo por definirse" }
+      { "pais": "Turkey", "fifa": "TUR", "flag": "🇹🇷", "confederation": "UEFA" }
     ]
   },
   {
     "grupo": "B",
     "seleccion": [
       { "pais": "Canada", "fifa": "CAN", "flag": "🇨🇦", "confederation": "CONCACAF" },
-      { "pais": "Playoff UEFA A", "fifa": "P-UEA", "flag": "🏳️", "confederation": "UEFA", "note": "Equipo por definirse" },
+      { "pais": "Bosnia and Herzegovina", "fifa": "BIH", "flag": "🇧🇦", "confederation": "UEFA" },
       { "pais": "Qatar", "fifa": "QAT", "flag": "🇶🇦", "confederation": "AFC" },
       { "pais": "Switzerland", "fifa": "SUI", "flag": "🇨🇭", "confederation": "UEFA" }
     ]
@@ -23,7 +23,7 @@
       { "pais": "Brazil", "fifa": "BRA", "flag": "🇧🇷", "confederation": "CONMEBOL" },
       { "pais": "Morocco", "fifa": "MAR", "flag": "🇲🇦", "confederation": "CAF" },
       { "pais": "Haiti", "fifa": "HAI", "flag": "🇭🇹", "confederation": "CONCACAF" },
-      { "pais": "Scotland", "fifa": "SCO", "flag": "🏴", "confederation": "UEFA" }
+      { "pais": "Scotland", "fifa": "SCO", "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "confederation": "UEFA" }
     ]
   },
   {
@@ -32,7 +32,7 @@
       { "pais": "United States", "fifa": "USA", "flag": "🇺🇸", "confederation": "CONCACAF" },
       { "pais": "Paraguay", "fifa": "PAR", "flag": "🇵🇾", "confederation": "CONMEBOL" },
       { "pais": "Australia", "fifa": "AUS", "flag": "🇦🇺", "confederation": "AFC" },
-      { "pais": "Playoff UEFA C", "fifa": "P-UEC", "flag": "🏳️", "confederation": "UEFA", "note": "Equipo por definirse" }
+      { "pais": "Czech Republic", "fifa": "CZE", "flag": "🇨🇿", "confederation": "UEFA" }
     ]
   },
   {
@@ -49,7 +49,7 @@
     "seleccion": [
       { "pais": "Netherlands", "fifa": "NED", "flag": "🇳🇱", "confederation": "UEFA" },
       { "pais": "Japan", "fifa": "JPN", "flag": "🇯🇵", "confederation": "AFC" },
-      { "pais": "Playoff UEFA B", "fifa": "P-UEB", "flag": "🏳️", "confederation": "UEFA", "note": "Equipo por definirse" },
+      { "pais": "Sweden", "fifa": "SWE", "flag": "🇸🇪", "confederation": "UEFA" },
       { "pais": "Tunisia", "fifa": "TUN", "flag": "🇹🇳", "confederation": "CAF" }
     ]
   },
@@ -77,13 +77,13 @@
       { "pais": "France", "fifa": "FRA", "flag": "🇫🇷", "confederation": "UEFA" },
       { "pais": "Senegal", "fifa": "SEN", "flag": "🇸🇳", "confederation": "CAF" },
       { "pais": "Norway", "fifa": "NOR", "flag": "🇳🇴", "confederation": "UEFA" },
-      { "pais": "Playoff Interconfederation 1", "fifa": "P-INT1", "flag": "🏳️", "confederation": "Mixed", "note": "Equipo por definirse" }
+      { "pais": "Iraq", "fifa": "IRQ", "flag": "🇮🇶", "confederation": "AFC" }
     ]
   },
   {
     "grupo": "J",
     "seleccion": [
-      { "pais": "Argentina", "fifa": "ARG", "fifa_rank": "", "flag": "🇦🇷", "confederation": "CONMEBOL" },
+      { "pais": "Argentina", "fifa": "ARG", "flag": "🇦🇷", "confederation": "CONMEBOL" },
       { "pais": "Algeria", "fifa": "ALG", "flag": "🇩🇿", "confederation": "CAF" },
       { "pais": "Austria", "fifa": "AUT", "flag": "🇦🇹", "confederation": "UEFA" },
       { "pais": "Jordan", "fifa": "JOR", "flag": "🇯🇴", "confederation": "AFC" }
@@ -95,13 +95,13 @@
       { "pais": "Portugal", "fifa": "POR", "flag": "🇵🇹", "confederation": "UEFA" },
       { "pais": "Colombia", "fifa": "COL", "flag": "🇨🇴", "confederation": "CONMEBOL" },
       { "pais": "Uzbekistan", "fifa": "UZB", "flag": "🇺🇿", "confederation": "AFC" },
-      { "pais": "Playoff Interconfederation 2", "fifa": "P-INT2", "flag": "🏳️", "confederation": "Mixed", "note": "Equipo por definirse" }
+      { "pais": "DR Congo", "fifa": "COD", "flag": "🇨🇩", "confederation": "CAF" }
     ]
   },
   {
     "grupo": "L",
     "seleccion": [
-      { "pais": "England", "fifa": "ENG", "flag": "🏴", "confederation": "UEFA" },
+      { "pais": "England", "fifa": "ENG", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "confederation": "UEFA" },
       { "pais": "Croatia", "fifa": "CRO", "flag": "🇭🇷", "confederation": "UEFA" },
       { "pais": "Ghana", "fifa": "GHA", "flag": "🇬🇭", "confederation": "CAF" },
       { "pais": "Panama", "fifa": "PAN", "flag": "🇵🇦", "confederation": "CONCACAF" }

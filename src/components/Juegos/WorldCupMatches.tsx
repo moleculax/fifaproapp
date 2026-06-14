@@ -78,6 +78,21 @@ const WorldCupMatches: React.FC = () => {
         }
     };
 
+
+    // Obtener fecha actual formateada
+    const getTodayDate = () => {
+        const today = new Date();
+        return today.toLocaleDateString('es-ES', {
+            weekday: 'long',
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+        });
+    };
+
+    const todayDate = getTodayDate();
+
+
     const handleRefresh = async (event: CustomEvent) => {
         await getMatches();
         event.detail.complete();
@@ -138,17 +153,17 @@ const WorldCupMatches: React.FC = () => {
         <IonPage>
             <IonHeader>
                 <IonToolbar>
-                    <IonTitle>🏆 FIFA World Cup 2026</IonTitle>
+                    <IonTitle>🏆 FIFA World Cup 2026 Juegos Para hoy {todayDate}</IonTitle>
                 </IonToolbar>
 
-                <IonToolbar>
-                    <IonSearchbar
-                        value={searchTerm}
-                        onIonInput={e => setSearchTerm(e.detail.value!)}
-                        placeholder="Buscar equipo..."
-                        debounce={300}
-                    />
-                </IonToolbar>
+                {/*<IonToolbar>*/}
+                {/*    <IonSearchbar*/}
+                {/*        value={searchTerm}*/}
+                {/*        onIonInput={e => setSearchTerm(e.detail.value!)}*/}
+                {/*        placeholder="Buscar equipo..."*/}
+                {/*        debounce={300}*/}
+                {/*    />*/}
+                {/*</IonToolbar>*/}
 
                 <IonToolbar>
                     <IonSegment value={selectedFilter} onIonChange={e => setSelectedFilter(e.detail.value as any)}>
