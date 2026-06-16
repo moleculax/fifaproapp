@@ -46,7 +46,6 @@ import '@ionic/react/css/palettes/dark.system.css';
 import './theme/variables.css';
 import EstadisticasClasificados from "./components/EstadisticasClasificados";
 import WorldCupMatches from "./components/Juegos/WorldCupMatches";
-import WorldCupResults from "./components/WorldCupResultsPrimeraFase/WorldCupResults";
 
 
 
@@ -72,8 +71,7 @@ const App: React.FC = () => (
             <Redirect to="/home" />
           </Route>
             <Route exact path="/estadisticas">
-                {/*<EstadisticasClasificados />*/}
-                <WorldCupResults/>
+                <EstadisticasClasificados />
             </Route>
 
             <Route exact path="/juegos">
