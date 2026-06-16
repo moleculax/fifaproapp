@@ -209,7 +209,9 @@ const WorldCupMatches: React.FC = () => {
                                     <IonItem key={match.id} lines="full">
                                         <IonLabel>
                                             {/* Marcador con banderas */}
-                                            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '10px' }}>
+                                            <div style={{ display: 'flex', alignItems: 'center',
+                                                justifyContent: 'space-between',
+                                                marginBottom: '10px' }}>
                                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flex: 1 }}>
                                                     {match.homeTeam.crest && (
                                                         <IonAvatar style={{ width: '30px', height: '30px' }}>
@@ -234,8 +236,8 @@ const WorldCupMatches: React.FC = () => {
                                             </div>
 
                                             {/* Fecha y Grupo */}
-                                            <p style={{ margin: '6px 0', color: '#555' }}>
-                                                📅 {formatDate(match.utcDate)}
+                                            <p style={{ margin: '6px 0', color: '#555', textTransform: 'uppercase'  }}>
+                                                 {formatDate(match.utcDate)}
                                             </p>
                                             {match.group && (
                                                 <p style={{ margin: '4px 0', fontSize: '0.9em', color: '#666' }}>
@@ -264,6 +266,10 @@ const WorldCupMatches: React.FC = () => {
                     </IonList>
                 )}
             </IonContent>
+
+
+
+
         </IonPage>
     );
 };
