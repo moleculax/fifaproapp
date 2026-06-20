@@ -96,10 +96,16 @@ const App: React.FC = () => (
             <IonLabel>Primera fase</IonLabel>
           </IonTabButton>
 
-            <IonTabButton tab="estadisticas" href="https://native-stats.org/competition/WC/">
+            {/*<IonTabButton tab="estadisticas" href="/estadisticas">*/}
 
-                <IonIcon aria-hidden="true" icon={statsChart} />
-                <IonLabel>Estadísticas</IonLabel>
+            {/*    <IonIcon aria-hidden="true" icon={statsChart} />*/}
+            {/*    <IonLabel>Estadísticas</IonLabel>*/}
+            {/*</IonTabButton>*/}
+            <IonTabButton tab="estadisticas">
+                <a href="https://native-stats.org/competition/WC/" target="_blank" rel="noopener noreferrer">
+                    <IonIcon aria-hidden="true" icon={statsChart} />
+                    <IonLabel>Estadísticas</IonLabel>
+                </a>
             </IonTabButton>
 
             <IonTabButton tab="juegos" href="/juegos">
