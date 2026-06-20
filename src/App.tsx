@@ -96,7 +96,7 @@ const App: React.FC = () => (
             <IonLabel>Primera fase</IonLabel>
           </IonTabButton>
 
-            <IonTabButton tab="estadisticas" href="/estadisticas">
+            <IonTabButton tab="estadisticas" href="https://native-stats.org/competition/WC/">
 
                 <IonIcon aria-hidden="true" icon={statsChart} />
                 <IonLabel>Estadísticas</IonLabel>
