@@ -45,14 +45,52 @@ const MundialesComponent: React.FC = () => {
         setError('');
 
         try {
-            const response = await axios.get('/data/ganadoresCopaFiFA.json');
-            setMundiales(response.data);
+            // ✅ CORREGIDO: El archivo se llama ganadoresCopaFIFA.json
+            const response = await axios.get('/data/ganadoresCopaFIFA.json');
+
+            let datos = response.data;
+
+            if (!datos) {
+                datos = [];
+            }
+
+            if (typeof datos === 'object' && !Array.isArray(datos)) {
+                let encontrado = false;
+                for (const key in datos) {
+                    if (Array.isArray(datos[key])) {
+                        datos = datos[key];
+                        encontrado = true;
+                        break;
+                    }
+                }
+                if (!encontrado) {
+                    datos = Object.values(datos);
+                }
+            }
+
+            if (typeof datos === 'string') {
+                try {
+                    datos = JSON.parse(datos);
+                    if (!Array.isArray(datos)) {
+                        datos = [datos];
+                    }
+                } catch (e) {
+                    datos = [];
+                }
+            }
+
+            if (!Array.isArray(datos)) {
+                datos = [];
+            }
+
+            setMundiales(datos);
             setCargando(false);
-            console.log('✅ Mundiales cargados:', response.data.length);
+            console.log('✅ Mundiales cargados:', datos.length);
+
         } catch (err) {
+            console.error('❌ Error:', err);
             setCargando(false);
             setError('Error al cargar los datos. Verifica el archivo JSON.');
-            console.error('❌ Error cargando mundiales:', err);
         }
     };
 
@@ -187,7 +225,6 @@ const MundialesComponent: React.FC = () => {
                     <IonRefresherContent />
                 </IonRefresher>
 
-                {/* Loading */}
                 {cargando && (
                     <div className="loading-container">
                         <IonSpinner name="crescent" />
@@ -195,7 +232,6 @@ const MundialesComponent: React.FC = () => {
                     </div>
                 )}
 
-                {/* Error */}
                 {error && (
                     <div className="error-container">
                         <IonIcon icon={alertCircleOutline} color="danger" />
@@ -207,7 +243,6 @@ const MundialesComponent: React.FC = () => {
                     </div>
                 )}
 
-                {/* Lista de Mundiales */}
                 {!cargando && !error && mundiales.length > 0 && (
                     <IonList>
                         {mundiales.map((mundial) => (
@@ -275,7 +310,6 @@ const MundialesComponent: React.FC = () => {
                     </IonList>
                 )}
 
-                {/* Sin datos */}
                 {!cargando && !error && mundiales.length === 0 && (
                     <div className="empty-container">
                         <IonIcon icon={sadOutline} color="medium" />

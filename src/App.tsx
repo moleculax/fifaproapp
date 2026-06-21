@@ -1,4 +1,4 @@
-import { Redirect, Route } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import {
     IonApp,
     IonIcon,
@@ -55,27 +55,29 @@ const App: React.FC = () => (
         <IonReactRouter>
             <IonTabs>
                 <IonRouterOutlet>
-                    <Route exact path="/home">
-                        <Home />
-                    </Route>
-                    <Route exact path="/clasificados">
-                        <PageClasificadosMundial />
-                    </Route>
-                    <Route path="/primerafase">
-                        <PrimeraFase />
-                    </Route>
-                    <Route exact path="/">
-                        <Redirect to="/home" />
-                    </Route>
-                    {/*<Route exact path="/estadisticas">*/}
-                    {/*    <EstadisticasClasificados />*/}
-                    {/*</Route>*/}
-                    <Route exact path="/fifachampion">
-                        <MundialesComponent />
-                    </Route>
-                    <Route exact path="/juegos">
-                        <WorldCupMatches />
-                    </Route>
+                    <Switch>
+                        <Route exact path="/home">
+                            <Home />
+                        </Route>
+                        <Route exact path="/clasificados">
+                            <PageClasificadosMundial />
+                        </Route>
+                        <Route path="/primerafase">
+                            <PrimeraFase />
+                        </Route>
+                        <Route exact path="/">
+                            <Redirect to="/home" />
+                        </Route>
+                        {/*<Route exact path="/estadisticas">*/}
+                        {/*    <EstadisticasClasificados />*/}
+                        {/*</Route>*/}
+                        <Route exact path="/fifachampion">
+                            <MundialesComponent />
+                        </Route>
+                        <Route exact path="/juegos">
+                            <WorldCupMatches />
+                        </Route>
+                    </Switch>
                 </IonRouterOutlet>
 
                 <IonTabBar slot="bottom">
@@ -103,7 +105,7 @@ const App: React.FC = () => (
                     {/*    </a>*/}
                     {/*</IonTabButton>*/}
 
-                    <IonTabButton tab="estadisticas" href="/fifachampion">
+                    <IonTabButton tab="fifachampion" href="/fifachampion">
                         <IonIcon aria-hidden="true" icon={statsChart} />
                         <IonLabel>Campeones FIFA</IonLabel>
                     </IonTabButton>
