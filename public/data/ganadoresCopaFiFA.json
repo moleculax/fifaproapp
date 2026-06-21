@@ -1,0 +1,200 @@
+[
+  {
+    "id": 1,
+    "ano": 1930,
+    "sede": "Uruguay 🇺🇾",
+    "primero": "Uruguay 🇺🇾",
+    "segundo": "Argentina 🇦🇷",
+    "tercero": "Estados Unidos 🇺🇸",
+    "cuarto": "Yugoslavia 🇷🇸"
+  },
+  {
+    "id": 2,
+    "ano": 1934,
+    "sede": "Italia 🇮🇹",
+    "primero": "Italia 🇮🇹",
+    "segundo": "Checoslovaquia 🇨🇿",
+    "tercero": "Alemania 🇩🇪",
+    "cuarto": "Austria 🇦🇹"
+  },
+  {
+    "id": 3,
+    "ano": 1938,
+    "sede": "Francia 🇫🇷",
+    "primero": "Italia 🇮🇹",
+    "segundo": "Hungría 🇭🇺",
+    "tercero": "Brasil 🇧🇷",
+    "cuarto": "Suecia 🇸🇪"
+  },
+  {
+    "id": 4,
+    "ano": 1950,
+    "sede": "Brasil 🇧🇷",
+    "primero": "Uruguay 🇺🇾",
+    "segundo": "Brasil 🇧🇷",
+    "tercero": "Suecia 🇸🇪",
+    "cuarto": "España 🇪🇸"
+  },
+  {
+    "id": 5,
+    "ano": 1954,
+    "sede": "Suiza 🇨🇭",
+    "primero": "Alemania Federal 🇩🇪",
+    "segundo": "Hungría 🇭🇺",
+    "tercero": "Austria 🇦🇹",
+    "cuarto": "Uruguay 🇺🇾"
+  },
+  {
+    "id": 6,
+    "ano": 1958,
+    "sede": "Suecia 🇸🇪",
+    "primero": "Brasil 🇧🇷",
+    "segundo": "Suecia 🇸🇪",
+    "tercero": "Francia 🇫🇷",
+    "cuarto": "Alemania Federal 🇩🇪"
+  },
+  {
+    "id": 7,
+    "ano": 1962,
+    "sede": "Chile 🇨🇱",
+    "primero": "Brasil 🇧🇷",
+    "segundo": "Checoslovaquia 🇨🇿",
+    "tercero": "Chile 🇨🇱",
+    "cuarto": "Yugoslavia 🇷🇸"
+  },
+  {
+    "id": 8,
+    "ano": 1966,
+    "sede": "Inglaterra 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "primero": "Inglaterra 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "segundo": "Alemania Federal 🇩🇪",
+    "tercero": "Portugal 🇵🇹",
+    "cuarto": "Unión Soviética 🇷🇺"
+  },
+  {
+    "id": 9,
+    "ano": 1970,
+    "sede": "México 🇲🇽",
+    "primero": "Brasil 🇧🇷",
+    "segundo": "Italia 🇮🇹",
+    "tercero": "Alemania Federal 🇩🇪",
+    "cuarto": "Uruguay 🇺🇾"
+  },
+  {
+    "id": 10,
+    "ano": 1974,
+    "sede": "Alemania Federal 🇩🇪",
+    "primero": "Alemania Federal 🇩🇪",
+    "segundo": "Países Bajos 🇳🇱",
+    "tercero": "Polonia 🇵🇱",
+    "cuarto": "Brasil 🇧🇷"
+  },
+  {
+    "id": 11,
+    "ano": 1978,
+    "sede": "Argentina 🇦🇷",
+    "primero": "Argentina 🇦🇷",
+    "segundo": "Países Bajos 🇳🇱",
+    "tercero": "Brasil 🇧🇷",
+    "cuarto": "Italia 🇮🇹"
+  },
+  {
+    "id": 12,
+    "ano": 1982,
+    "sede": "España 🇪🇸",
+    "primero": "Italia 🇮🇹",
+    "segundo": "Alemania Federal 🇩🇪",
+    "tercero": "Polonia 🇵🇱",
+    "cuarto": "Francia 🇫🇷"
+  },
+  {
+    "id": 13,
+    "ano": 1986,
+    "sede": "México 🇲🇽",
+    "primero": "Argentina 🇦🇷",
+    "segundo": "Alemania Federal 🇩🇪",
+    "tercero": "Francia 🇫🇷",
+    "cuarto": "Bélgica 🇧🇪"
+  },
+  {
+    "id": 14,
+    "ano": 1990,
+    "sede": "Italia 🇮🇹",
+    "primero": "Alemania Federal 🇩🇪",
+    "segundo": "Argentina 🇦🇷",
+    "tercero": "Italia 🇮🇹",
+    "cuarto": "Inglaterra 🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+  },
+  {
+    "id": 15,
+    "ano": 1994,
+    "sede": "Estados Unidos 🇺🇸",
+    "primero": "Brasil 🇧🇷",
+    "segundo": "Italia 🇮🇹",
+    "tercero": "Suecia 🇸🇪",
+    "cuarto": "Bulgaria 🇧🇬"
+  },
+  {
+    "id": 16,
+    "ano": 1998,
+    "sede": "Francia 🇫🇷",
+    "primero": "Francia 🇫🇷",
+    "segundo": "Brasil 🇧🇷",
+    "tercero": "Croacia 🇭🇷",
+    "cuarto": "Países Bajos 🇳🇱"
+  },
+  {
+    "id": 17,
+    "ano": 2002,
+    "sede": "Corea-Japón 🇰🇷🇯🇵",
+    "primero": "Brasil 🇧🇷",
+    "segundo": "Alemania 🇩🇪",
+    "tercero": "Turquía 🇹🇷",
+    "cuarto": "Corea del Sur 🇰🇷"
+  },
+  {
+    "id": 18,
+    "ano": 2006,
+    "sede": "Alemania 🇩🇪",
+    "primero": "Italia 🇮🇹",
+    "segundo": "Francia 🇫🇷",
+    "tercero": "Alemania 🇩🇪",
+    "cuarto": "Portugal 🇵🇹"
+  },
+  {
+    "id": 19,
+    "ano": 2010,
+    "sede": "Sudáfrica 🇿🇦",
+    "primero": "España 🇪🇸",
+    "segundo": "Países Bajos 🇳🇱",
+    "tercero": "Alemania 🇩🇪",
+    "cuarto": "Uruguay 🇺🇾"
+  },
+  {
+    "id": 20,
+    "ano": 2014,
+    "sede": "Brasil 🇧🇷",
+    "primero": "Alemania 🇩🇪",
+    "segundo": "Argentina 🇦🇷",
+    "tercero": "Países Bajos 🇳🇱",
+    "cuarto": "Brasil 🇧🇷"
+  },
+  {
+    "id": 21,
+    "ano": 2018,
+    "sede": "Rusia 🇷🇺",
+    "primero": "Francia 🇫🇷",
+    "segundo": "Croacia 🇭🇷",
+    "tercero": "Bélgica 🇧🇪",
+    "cuarto": "Inglaterra 🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+  },
+  {
+    "id": 22,
+    "ano": 2022,
+    "sede": "Qatar 🇶🇦",
+    "primero": "Argentina 🇦🇷",
+    "segundo": "Francia 🇫🇷",
+    "tercero": "Croacia 🇭🇷",
+    "cuarto": "Marruecos 🇲🇦"
+  }
+]

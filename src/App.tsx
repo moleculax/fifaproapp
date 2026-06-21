@@ -1,16 +1,16 @@
 import { Redirect, Route } from 'react-router-dom';
 import {
-  IonApp,
-  IonIcon,
-  IonLabel,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
-  setupIonicReact
+    IonApp,
+    IonIcon,
+    IonLabel,
+    IonRouterOutlet,
+    IonTabBar,
+    IonTabButton,
+    IonTabs,
+    setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import {ellipse, square, statsChart, triangle} from 'ionicons/icons';
+import { ellipse, square, statsChart, triangle } from 'ionicons/icons';
 import Home from './pages/Home';
 import PageClasificadosMundial from './components/PageClasificadosMundial';
 import PrimeraFase from './components/PrimeraFase';
@@ -46,80 +46,76 @@ import '@ionic/react/css/palettes/dark.system.css';
 import './theme/variables.css';
 import EstadisticasClasificados from "./components/EstadisticasClasificados";
 import WorldCupMatches from "./components/Juegos/WorldCupMatches";
-
-
+import MundialesComponent from "./components/ganadoresFIFA/MundialesComponent";
 
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route exact path="/clasificados">
-            <PageClasificadosMundial />
-          </Route>
+    <IonApp>
+        <IonReactRouter>
+            <IonTabs>
+                <IonRouterOutlet>
+                    <Route exact path="/home">
+                        <Home />
+                    </Route>
+                    <Route exact path="/clasificados">
+                        <PageClasificadosMundial />
+                    </Route>
+                    <Route path="/primerafase">
+                        <PrimeraFase />
+                    </Route>
+                    <Route exact path="/">
+                        <Redirect to="/home" />
+                    </Route>
+                    {/*<Route exact path="/estadisticas">*/}
+                    {/*    <EstadisticasClasificados />*/}
+                    {/*</Route>*/}
+                    <Route exact path="/fifachampion">
+                        <MundialesComponent />
+                    </Route>
+                    <Route exact path="/juegos">
+                        <WorldCupMatches />
+                    </Route>
+                </IonRouterOutlet>
 
-          <Route path="/primerafase">
-            <PrimeraFase />
+                <IonTabBar slot="bottom">
+                    <IonTabButton tab="tab1" href="/home">
+                        <IonIcon aria-hidden="true" icon={triangle} />
+                        <IonLabel>Home</IonLabel>
+                    </IonTabButton>
+                    <IonTabButton tab="clasificados" href="/clasificados">
+                        <IonIcon aria-hidden="true" icon={ellipse} />
+                        <IonLabel>Clasificados</IonLabel>
+                    </IonTabButton>
+                    <IonTabButton tab="tab3" href="/primerafase">
+                        <IonIcon aria-hidden="true" icon={square} />
+                        <IonLabel>Primera fase</IonLabel>
+                    </IonTabButton>
 
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/home" />
-          </Route>
-            <Route exact path="/estadisticas">
-                <EstadisticasClasificados />
-            </Route>
+                    {/*<IonTabButton tab="estadisticas" href="/estadisticas">*/}
+                    {/*    <IonIcon aria-hidden="true" icon={statsChart} />*/}
+                    {/*    <IonLabel>Estadísticas</IonLabel>*/}
+                    {/*</IonTabButton>*/}
+                    {/*<IonTabButton tab="estadisticas">*/}
+                    {/*    <a href="https://native-stats.org/competition/WC/" target="_blank" rel="noopener noreferrer">*/}
+                    {/*        <IonIcon aria-hidden="true" icon={statsChart} />*/}
+                    {/*        <IonLabel>Estadísticas</IonLabel>*/}
+                    {/*    </a>*/}
+                    {/*</IonTabButton>*/}
 
-            <Route exact path="/juegos">
-                <WorldCupMatches />
-            </Route>
+                    <IonTabButton tab="estadisticas" href="/fifachampion">
+                        <IonIcon aria-hidden="true" icon={statsChart} />
+                        <IonLabel>Campeones FIFA</IonLabel>
+                    </IonTabButton>
 
-
-
-
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/home">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Home</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="clasificados" href="/clasificados">
-            <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Clasificados</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/primerafase">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Primera fase</IonLabel>
-          </IonTabButton>
-
-            {/*<IonTabButton tab="estadisticas" href="/estadisticas">*/}
-
-            {/*    <IonIcon aria-hidden="true" icon={statsChart} />*/}
-            {/*    <IonLabel>Estadísticas</IonLabel>*/}
-            {/*</IonTabButton>*/}
-            <IonTabButton tab="estadisticas">
-                <a href="https://native-stats.org/competition/WC/" target="_blank" rel="noopener noreferrer">
-                    <IonIcon aria-hidden="true" icon={statsChart} />
-                    <IonLabel>Estadísticas</IonLabel>
-                </a>
-            </IonTabButton>
-
-            <IonTabButton tab="juegos" href="/juegos">
-
-                <IonIcon aria-hidden="true" icon={statsChart} />
-                <IonLabel>Juegos</IonLabel>
-            </IonTabButton>
-
-
-
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
-  </IonApp>
+                    <IonTabButton tab="juegos" href="/juegos">
+                        <IonIcon aria-hidden="true" icon={statsChart} />
+                        <IonLabel>Juegos</IonLabel>
+                    </IonTabButton>
+                </IonTabBar>
+            </IonTabs>
+        </IonReactRouter>
+    </IonApp>
 );
 
 export default App;
