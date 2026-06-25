@@ -47,6 +47,7 @@ import './theme/variables.css';
 import EstadisticasClasificados from "./components/EstadisticasClasificados";
 import WorldCupMatches from "./components/Juegos/WorldCupMatches";
 import MundialesComponent from "./components/ganadoresFIFA/MundialesComponent";
+import BracketTorneo from "./components/clasificados/BracketTorneo";
 
 setupIonicReact();
 
@@ -77,6 +78,11 @@ const App: React.FC = () => (
                         <Route exact path="/juegos">
                             <WorldCupMatches />
                         </Route>
+
+                        <Route exact path="/clasificados2fase">
+                            <BracketTorneo />
+                        </Route>
+
                     </Switch>
                 </IonRouterOutlet>
 
@@ -114,6 +120,13 @@ const App: React.FC = () => (
                         <IonIcon aria-hidden="true" icon={statsChart} />
                         <IonLabel>Juegos</IonLabel>
                     </IonTabButton>
+
+                    <IonTabButton tab="clasificados2fase" href="/clasificados2fase">
+                        <IonIcon aria-hidden="true" icon={statsChart} />
+                        <IonLabel>2da fase</IonLabel>
+                    </IonTabButton>
+
+
                 </IonTabBar>
             </IonTabs>
         </IonReactRouter>
