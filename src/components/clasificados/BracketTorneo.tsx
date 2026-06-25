@@ -210,9 +210,10 @@ const BracketTorneo: React.FC = () => {
             <div style={{
                 display: 'flex',
                 gap: '10px',
-                alignItems: 'stretch',
+                alignItems: 'flex-start',
                 minWidth: 'max-content',
-                height: '100%'
+                height: '100%',
+                paddingBottom: '20px'
             }}>
                 {columnasVisuales.map((columna: Ronda, indexColumna: number) => (
                     <div
@@ -220,15 +221,16 @@ const BracketTorneo: React.FC = () => {
                         style={{
                             display: 'flex',
                             flexDirection: 'column',
-                            justifyContent: 'space-around',
+                            justifyContent: 'flex-start',
                             minWidth: '160px',
                             maxWidth: '180px',
                             flex: '1',
                             height: '100%',
-                            padding: '0 5px'
+                            padding: '0 5px',
+                            gap: '4px'
                         }}
                     >
-                        <div style={{ textAlign: 'center', marginBottom: '8px' }}>
+                        <div style={{ textAlign: 'center', marginBottom: '8px', position: 'sticky', top: 0, backgroundColor: '#f4f5f7', zIndex: 1, padding: '4px 0' }}>
                             <h3 style={{ margin: 0, fontSize: '0.7rem', fontWeight: '600', color: '#333' }}>
                                 {columna.ronda}
                             </h3>
@@ -241,7 +243,7 @@ const BracketTorneo: React.FC = () => {
                                     backgroundColor: 'white',
                                     borderRadius: '6px',
                                     padding: '6px 8px',
-                                    margin: '4px 0',
+                                    margin: '2px 0',
                                     border: '1px solid #e0e0e0',
                                     boxShadow: '0 1px 3px rgba(0,0,0,0.06)',
                                     flexShrink: 0
@@ -292,7 +294,6 @@ const BracketTorneo: React.FC = () => {
                     </div>
                 ))}
             </div>
-            <div style={{height: 500}}></div>
         </div>
     );
 };
