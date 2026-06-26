@@ -31,19 +31,19 @@ interface EstructuraTorneo {
 
 // Diccionario con las banderas de los equipos
 const banderasEquipos: Record<string, string> = {
-    // Conmebol
+// Conmebol
     "ARG": "🇦🇷", "BRA": "🇧🇷", "URU": "🇺🇾", "COL": "🇨🇴", "ECU": "🇪🇨", "PAR": "🇵🇾", "CHI": "🇨🇱", "VEN": "🇻🇪", "PER": "🇵🇪", "BOL": "🇧🇴",
 
-    // Concacaf
+// Concacaf
     "USA": "🇺🇸", "MEX": "🇲🇽", "CAN": "🇨🇦", "CRC": "🇨🇷", "PAN": "🇵🇦", "JAM": "🇯🇲", "HON": "🇭🇳", "SLV": "🇸🇻",
 
-    // UEFA
-    "GER": "🇩🇪", "SUI": "🇨🇭", "FRA": "🇫🇷", "ESP": "🇪🇸", "ENG": "🇬🇧", "ITA": "🇮🇹", "NED": "🇳🇱", "POR": "🇵🇹", "BEL": "🇧🇪", "CRO": "🇭🇷", "DEN": "🇩🇰", "TUR": "🇹🇷", "AUT": "🇦🇹", "UKR": "🇺🇦", "POL": "🇵🇱",
+// UEFA
+    "GER": "🇩🇪", "SUI": "🇨🇭", "FRA": "🇫🇷", "ESP": "🇪🇸", "ENG": "🇬🇧", "ITA": "🇮🇹", "NED": "🇳🇱", "POR": "🇵🇹", "BEL": "🇧🇪", "CRO": "🇭🇷", "DEN": "🇩🇰", "TUR": "🇹🇷", "AUT": "🇦🇹", "UKR": "🇺🇦", "POL": "🇵🇱", "BIH": "🇧🇦",
 
-    // CAF (África)
+// CAF (África)
     "MAR": "🇲🇦", "CIV": "🇨🇮", "SEN": "🇸🇳", "NGA": "🇳🇬", "EGY": "🇪🇬", "TUN": "🇹🇳", "ALG": "🇩🇿", "RSA": "🇿🇦", "CMR": "🇨🇲", "GHA": "🇬🇭",
 
-    // AFC (Asia) & OFC
+// AFC (Asia) & OFC
     "JPN": "🇯🇵", "KOR": "🇰🇷", "AUS": "🇦🇺", "IRN": "🇮🇷", "KSA": "🇸🇦", "QAT": "🇶🇦", "IRQ": "🇮🇶", "NZL": "🇳🇿",
 
     // Marcadores de posición
@@ -104,10 +104,10 @@ const datosTorneo: EstructuraTorneo = {
                 { id: "P74", equipo1: "GER", equipo2: "3ABCDF", fecha: "29/06/2026 17:30" },
                 { id: "P77", equipo1: "1I", equipo2: "3CDFGH", fecha: "30/06/2026 18:00" },
                 { id: "P73", equipo1: "RSA", equipo2: "CAN", fecha: "28/06/2026 16:00" },
-                { id: "P75", equipo1: "1F", equipo2: "MAR", fecha: "29/06/2026 22:00" },
+                { id: "P75", equipo1: "NED", equipo2: "MAR", fecha: "29/06/2026 22:00" },
                 { id: "P83", equipo1: "2K", equipo2: "2L", fecha: "02/07/2026 20:00" },
                 { id: "P84", equipo1: "1H", equipo2: "2J", fecha: "02/07/2026 16:00" },
-                { id: "P81", equipo1: "USA", equipo2: "3BEFIJ", fecha: "01/07/2026 21:00" },
+                { id: "P81", equipo1: "USA", equipo2: "BIH", fecha: "01/07/2026 21:00" },
                 { id: "P82", equipo1: "1G", equipo2: "3AEHIJ", fecha: "01/07/2026 17:00" }
             ]
         },
@@ -169,7 +169,7 @@ const datosTorneo: EstructuraTorneo = {
         {
             ronda: "Dieciseisavos de final",
             partidos: [
-                { id: "P76", equipo1: "BRA", equipo2: "2F", fecha: "05/07/2026 17:00" },
+                { id: "P76", equipo1: "BRA", equipo2: "JPN", fecha: "05/07/2026 17:00" },
                 { id: "P78", equipo1: "CIV", equipo2: "2I", fecha: "30/06/2026 14:00" },
                 { id: "P79", equipo1: "MEX", equipo2: "3CEFHI", fecha: "30/06/2026 22:00" },
                 { id: "P80", equipo1: "1L", equipo2: "3EHIJK", fecha: "01/07/2026 13:00" },
@@ -294,6 +294,7 @@ const BracketTorneo: React.FC = () => {
                     </div>
                 ))}
             </div>
+            <div style={{height: 500}}></div>
         </div>
     );
 };
