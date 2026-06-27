@@ -123,7 +123,7 @@ const App: React.FC = () => (
 
                     <IonTabButton tab="clasificados2fase" href="/clasificados2fase">
                         <IonIcon aria-hidden="true" icon={statsChart} />
-                        <IonLabel>Clasificacion</IonLabel>
+                        <IonLabel>Fases Clasificacion</IonLabel>
                     </IonTabButton>
 
 
