@@ -17,6 +17,8 @@ const PrimeraFase: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <PrimeraFaseDeGrupo name="Primera Fase" />
+
+
       </IonContent>
     </IonPage>
   );
