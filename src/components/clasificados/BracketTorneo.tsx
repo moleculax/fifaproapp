@@ -41,10 +41,10 @@ const banderasEquipos: Record<string, string> = {
     "GER": "🇩🇪", "SUI": "🇨🇭", "FRA": "🇫🇷", "ESP": "🇪🇸", "ENG": "🇬🇧", "ITA": "🇮🇹", "NED": "🇳🇱", "POR": "🇵🇹", "BEL": "🇧🇪", "CRO": "🇭🇷", "DEN": "🇩🇰", "TUR": "🇹🇷", "AUT": "🇦🇹", "UKR": "🇺🇦", "POL": "🇵🇱", "BIH": "🇧🇦",
 
 // CAF (África)
-    "MAR": "🇲🇦", "CIV": "🇨🇮", "SEN": "🇸🇳", "NGA": "🇳🇬", "EGY": "🇪🇬", "TUN": "🇹🇳", "ALG": "🇩🇿", "RSA": "🇿🇦", "CMR": "🇨🇲", "GHA": "🇬🇭",
+    "MAR": "🇲🇦", "CIV": "🇨🇮", "SEN": "🇸🇳", "NGA": "🇳🇬", "EGY": "🇪🇬", "TUN": "🇹🇳", "ALG": "🇩🇿", "RSA": "🇿🇦", "CMR": "🇨🇲", "GHA": "🇬🇭",  "CPV": "🇨🇻",
 
 // AFC (Asia) & OFC
-    "JPN": "🇯🇵", "KOR": "🇰🇷", "AUS": "🇦🇺", "IRN": "🇮🇷", "KSA": "🇸🇦", "QAT": "🇶🇦", "IRQ": "🇮🇶", "NZL": "🇳🇿", "CPV": "🇨🇻",
+    "JPN": "🇯🇵", "KOR": "🇰🇷", "AUS": "🇦🇺", "IRN": "🇮🇷", "KSA": "🇸🇦", "QAT": "🇶🇦", "IRQ": "🇮🇶", "NZL": "🇳🇿",
 
     // Marcadores de posición
     "3ABCDF": "🏳️", "1I": "🏳️", "3CDFGH": "🏳️", "1F": "🏳️",
