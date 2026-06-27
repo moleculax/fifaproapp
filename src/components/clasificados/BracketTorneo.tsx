@@ -31,20 +31,68 @@ interface EstructuraTorneo {
 
 // Diccionario con las banderas de los equipos
 const banderasEquipos: Record<string, string> = {
-// Conmebol
-    "ARG": "🇦🇷", "BRA": "🇧🇷", "URU": "🇺🇾", "COL": "🇨🇴", "ECU": "🇪🇨", "PAR": "🇵🇾", "CHI": "🇨🇱", "VEN": "🇻🇪", "PER": "🇵🇪", "BOL": "🇧🇴",
+// CONMEBOL (Sudamérica) - COMPLETO ✅
+    "ARG": "🇦🇷", "BRA": "🇧🇷", "URU": "🇺🇾", "COL": "🇨🇴",
+    "ECU": "🇪🇨", "PAR": "🇵🇾", "CHI": "🇨🇱", "VEN": "🇻🇪",
+    "PER": "🇵🇪", "BOL": "🇧🇴",
 
-// Concacaf
-    "USA": "🇺🇸", "MEX": "🇲🇽", "CAN": "🇨🇦", "CRC": "🇨🇷", "PAN": "🇵🇦", "JAM": "🇯🇲", "HON": "🇭🇳", "SLV": "🇸🇻",
+// CONCACAF (Norte/Centroamérica y Caribe)
+    "USA": "🇺🇸", "MEX": "🇲🇽", "CAN": "🇨🇦", "CRC": "🇨🇷",
+    "PAN": "🇵🇦", "JAM": "🇯🇲", "HON": "🇭🇳", "SLV": "🇸🇻",
+    "CUB": "🇨🇺", "HAI": "🇭🇹", "TRI": "🇹🇹", "GUA": "🇬🇹",
+    "NIC": "🇳🇮", "BRB": "🇧🇧", "ATG": "🇦🇬", "VIN": "🇻🇨",
+    "LCA": "🇱🇨", "DMA": "🇩🇲", "GRN": "🇬🇩", "SKN": "🇰🇳",
 
-// UEFA
-    "GER": "🇩🇪", "SUI": "🇨🇭", "FRA": "🇫🇷", "ESP": "🇪🇸", "ENG": "🇬🇧", "ITA": "🇮🇹", "NED": "🇳🇱", "POR": "🇵🇹", "BEL": "🇧🇪", "CRO": "🇭🇷", "DEN": "🇩🇰", "TUR": "🇹🇷", "AUT": "🇦🇹", "UKR": "🇺🇦", "POL": "🇵🇱", "BIH": "🇧🇦",
+// UEFA (Europa) - COMPLETO
+    "GER": "🇩🇪", "SUI": "🇨🇭", "FRA": "🇫🇷", "ESP": "🇪🇸",
+    "ENG": "🇬🇧", "ITA": "🇮🇹", "NED": "🇳🇱", "POR": "🇵🇹",
+    "BEL": "🇧🇪", "CRO": "🇭🇷", "DEN": "🇩🇰", "TUR": "🇹🇷",
+    "AUT": "🇦🇹", "UKR": "🇺🇦", "POL": "🇵🇱", "BIH": "🇧🇦",
+    "SWE": "🇸🇪", "NOR": "🇳🇴", "SCO": "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "WAL": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+    "IRL": "🇮🇪", "NIR": "🇬🇧", "GRE": "🇬🇷", "HUN": "🇭🇺",
+    "ROU": "🇷🇴", "BUL": "🇧🇬", "CZE": "🇨🇿", "SVK": "🇸🇰",
+    "SVN": "🇸🇮", "SRB": "🇷🇸", "ISR": "🇮🇱", "RUS": "🇷🇺",
+    "FIN": "🇫🇮", "ISL": "🇮🇸", "ALB": "🇦🇱", "MNE": "🇲🇪",
+    "MKD": "🇲🇰", "LUX": "🇱🇺", "GEO": "🇬🇪", "ARM": "🇦🇲",
+    "AZE": "🇦🇿", "KOS": "🇽🇰", "MLT": "🇲🇹", "CYP": "🇨🇾",
+    "EST": "🇪🇪", "LVA": "🇱🇻", "LTU": "🇱🇹", "BLR": "🇧🇾",
+    "MDA": "🇲🇩", "AND": "🇦🇩", "SMR": "🇸🇲", "LIE": "🇱🇮",
+    "FRO": "🇫🇴", "GIB": "🇬🇮",
 
-// CAF (África)
-    "MAR": "🇲🇦", "CIV": "🇨🇮", "SEN": "🇸🇳", "NGA": "🇳🇬", "EGY": "🇪🇬", "TUN": "🇹🇳", "ALG": "🇩🇿", "RSA": "🇿🇦", "CMR": "🇨🇲", "GHA": "🇬🇭",  "CPV": "🇨🇻",
+// CAF (África) - COMPLETO
+    "MAR": "🇲🇦", "CIV": "🇨🇮", "SEN": "🇸🇳", "NGA": "🇳🇬",
+    "EGY": "🇪🇬", "TUN": "🇹🇳", "ALG": "🇩🇿", "RSA": "🇿🇦",
+    "CMR": "🇨🇲", "GHA": "🇬🇭", "CPV": "🇨🇻",
+    "COD": "🇨🇩", "MLI": "🇲🇱", "BFA": "🇧🇫", "GAB": "🇬🇦",
+    "GUI": "🇬🇳", "ZAM": "🇿🇲", "ZIM": "🇿🇼", "ANG": "🇦🇴",
+    "SUD": "🇸🇩", "UGA": "🇺🇬", "KEN": "🇰🇪", "TOG": "🇹🇬",
+    "BEN": "🇧🇯", "EQG": "🇬🇶", "MAD": "🇲🇬", "MTN": "🇲🇷",
+    "RWA": "🇷🇼", "BDI": "🇧🇮", "ETH": "🇪🇹", "LBY": "🇱🇾",
+    "GNB": "🇬🇼", "SLE": "🇸🇱", "LBR": "🇱🇷", "CGO": "🇨🇬",
+    "CHA": "🇹🇩", "NIG": "🇳🇪", "SOM": "🇸🇴", "DJI": "🇩🇯",
+    "ERI": "🇪🇷", "SSD": "🇸🇸", "COM": "🇰🇲", "MAW": "🇲🇼",
+    "MOZ": "🇲🇿", "BOT": "🇧🇼", "NAM": "🇳🇦", "ESW": "🇸🇿",
+    "LES": "🇱🇸", "MRI": "🇲🇺", "SEY": "🇸🇨", "STP": "🇸🇹",
+    "GAM": "🇬🇲", "CAF": "🇨🇫",
 
-// AFC (Asia) & OFC
-    "JPN": "🇯🇵", "KOR": "🇰🇷", "AUS": "🇦🇺", "IRN": "🇮🇷", "KSA": "🇸🇦", "QAT": "🇶🇦", "IRQ": "🇮🇶", "NZL": "🇳🇿",
+// AFC (Asia) - COMPLETO
+    "JPN": "🇯🇵", "KOR": "🇰🇷", "AUS": "🇦🇺", "IRN": "🇮🇷",
+    "KSA": "🇸🇦", "QAT": "🇶🇦", "IRQ": "🇮🇶",
+    "UAE": "🇦🇪", "JOR": "🇯🇴", "OMA": "🇴🇲", "SYR": "🇸🇾",
+    "PRK": "🇰🇵", "VIE": "🇻🇳", "THA": "🇹🇭", "CHN": "🇨🇳",
+    "UZB": "🇺🇿", "KSA": "🇸🇦", "BHR": "🇧🇭", "KUW": "🇰🇼",
+    "LBN": "🇱🇧", "PLE": "🇵🇸", "JOR": "🇯🇴", "YEM": "🇾🇪",
+    "IND": "🇮🇳", "PAK": "🇵🇰", "BAN": "🇧🇩", "SRI": "🇱🇰",
+    "NEP": "🇳🇵", "BHU": "🇧🇹", "MDV": "🇲🇻",
+    "MYA": "🇲🇲", "MAS": "🇲🇾", "SIN": "🇸🇬", "PHI": "🇵🇭",
+    "IDN": "🇮🇩", "CAM": "🇰🇭", "TLS": "🇹🇱", "LAO": "🇱🇦",
+    "TKM": "🇹🇲", "KGZ": "🇰🇬", "TJK": "🇹🇯", "AFG": "🇦🇫",
+
+// OFC (Oceanía) - COMPLETO
+    "NZL": "🇳🇿",
+    "FIJ": "🇫🇯", "VAN": "🇻🇺", "SOL": "🇸🇧", "PNG": "🇵🇬",
+    "NCL": "🇳🇨", "TAH": "🇵🇫", "SAM": "🇼🇸", "TGA": "🇹🇴",
+    "ASA": "🇦🇸", "COK": "🇨🇰", "NMI": "🇲🇵", "GUM": "🇬🇺",
 
     // Marcadores de posición
     "3ABCDF": "🏳️", "1I": "🏳️", "3CDFGH": "🏳️", "1F": "🏳️",
@@ -102,13 +150,13 @@ const datosTorneo: EstructuraTorneo = {
             ronda: "Dieciseisavos de final",
             partidos: [
                 { id: "P74", equipo1: "GER", equipo2: "3ABCDF", fecha: "29/06/2026 17:30" },
-                { id: "P77", equipo1: "FRA", equipo2: "3CDFGH", fecha: "30/06/2026 18:00" },
+                { id: "P77", equipo1: "FRA", equipo2: "SWE", fecha: "30/06/2026 18:00" },
                 { id: "P73", equipo1: "RSA", equipo2: "CAN", fecha: "28/06/2026 16:00" },
                 { id: "P75", equipo1: "NED", equipo2: "MAR", fecha: "29/06/2026 22:00" },
                 { id: "P83", equipo1: "2K", equipo2: "2L", fecha: "02/07/2026 20:00" },
-                { id: "P84", equipo1: "1H", equipo2: "2J", fecha: "02/07/2026 16:00" },
+                { id: "P84", equipo1: "ESP", equipo2: "2J", fecha: "02/07/2026 16:00" },
                 { id: "P81", equipo1: "USA", equipo2: "BIH", fecha: "01/07/2026 21:00" },
-                { id: "P82", equipo1: "1G", equipo2: "3AEHIJ", fecha: "01/07/2026 17:00" }
+                { id: "P82", equipo1: "BEL", equipo2: "3AEHIJ", fecha: "01/07/2026 17:00" }
             ]
         },
         {
@@ -174,7 +222,7 @@ const datosTorneo: EstructuraTorneo = {
                 { id: "P79", equipo1: "MEX", equipo2: "3CEFHI", fecha: "30/06/2026 22:00" },
                 { id: "P80", equipo1: "1L", equipo2: "3EHIJK", fecha: "01/07/2026 13:00" },
                 { id: "P86", equipo1: "ARG", equipo2: "CPV", fecha: "03/07/2026 19:00" },
-                { id: "P88", equipo1: "2D", equipo2: "2G", fecha: "03/07/2026 15:00" },
+                { id: "P88", equipo1: "AUS", equipo2: "EGY", fecha: "03/07/2026 15:00" },
                 { id: "P85", equipo1: "SUI", equipo2: "3EFGIJ", fecha: "03/07/2026 00:00" },
                 { id: "P87", equipo1: "1K", equipo2: "3DEIJL", fecha: "03/07/2026 22:30" }
             ]
@@ -255,14 +303,14 @@ const BracketTorneo: React.FC = () => {
                                     </div>
                                 )}
 
-                                <div style={{ textAlign: 'center', fontSize: '0.55rem', color: '#999', marginBottom: '3px' }}>
+                                <div style={{ textAlign: 'center', fontSize: 12, color: '#000', marginBottom: '3px', fontWeight: 'bold' }}>
                                     {partido.fecha}
                                 </div>
 
                                 <div style={{
                                     padding: '2px 4px',
-                                    fontWeight: '500',
-                                    fontSize: '0.7rem',
+                                    fontWeight: 'bold',
+                                    fontSize: 12,
                                     color: '#000',
                                     borderLeft: `3px solid ${obtenerColor(partido.equipo1)}`,
                                     backgroundColor: `${obtenerColor(partido.equipo1)}15`,
@@ -275,18 +323,18 @@ const BracketTorneo: React.FC = () => {
 
                                 <div style={{
                                     padding: '2px 4px',
-                                    fontWeight: '500',
-                                    fontSize: '0.7rem',
+                                    fontWeight: 'bold',
+                                    fontSize: 12,
                                     color: '#000',
                                     borderLeft: `3px solid ${obtenerColor(partido.equipo2)}`,
                                     backgroundColor: `${obtenerColor(partido.equipo2)}15`,
                                     borderRadius: '3px'
                                 }}>
-                                    <span style={{ marginRight: '4px', fontSize: '0.6rem' }}>{obtenerBandera(partido.equipo2)}</span>
+                                    <span style={{marginRight: '4px', fontSize: '0.6rem' }}>{obtenerBandera(partido.equipo2)}</span>
                                     {partido.equipo2}
                                 </div>
 
-                                <div style={{ textAlign: 'left', fontSize: '0.55rem', color: '#666', marginTop: '2px', borderTop: '1px solid #f0f0f0', paddingTop: '2px', fontWeight: '600' }}>
+                                <div style={{fontWeight: 'bold', textAlign: 'left', fontSize: 12, color: '#000', marginTop: '2px', borderTop: '1px solid #f0f0f0', paddingTop: '2px' }}>
                                     {partido.id}
                                 </div>
                             </div>
