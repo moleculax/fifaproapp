@@ -208,7 +208,7 @@ const datosTorneo: EstructuraTorneo = {
         {
             ronda: "Octavos de final",
             partidos: [
-                { id: "P91", equipo1: "BRA", equipo2: "W78", fecha: "05/07/2026 17:00" },
+                { id: "P91", equipo1: "BRA", equipo2: "NOR", fecha: "05/07/2026 17:00" },
                 { id: "P92", equipo1: "W79", equipo2: "W80", fecha: "05/07/2026 21:00" },
                 { id: "P95", equipo1: "W86", equipo2: "W88", fecha: "07/07/2026 13:00" },
                 { id: "P96", equipo1: "W85", equipo2: "W87", fecha: "07/07/2026 17:00" }
@@ -278,8 +278,10 @@ const BracketTorneo: React.FC = () => {
                             gap: '4px'
                         }}
                     >
-                        <div style={{ textAlign: 'center', marginBottom: '8px', position: 'sticky', top: 0, backgroundColor: '#f4f5f7', zIndex: 1, padding: '4px 0' }}>
-                            <h3 style={{ margin: 0, fontSize: '0.7rem', fontWeight: '600', color: '#333' }}>
+                        <div style={{ textAlign: 'center', marginBottom: '8px', position: 'sticky',
+                            top: 0, backgroundColor: '#f4f5f7', zIndex: 1, padding: '4px 0' }}>
+                            <h3 style={{ margin: 0, fontSize: 12,
+                                fontWeight: "bold", color: '#000' }}>
                                 {columna.ronda}
                             </h3>
                         </div>
