@@ -209,7 +209,7 @@ const datosTorneo: EstructuraTorneo = {
             ronda: "Octavos de final",
             partidos: [
                 { id: "P91", equipo1: "BRA", equipo2: "NOR", fecha: "05/07/2026 17:00" },
-                { id: "P92", equipo1: "W79", equipo2: "W80", fecha: "05/07/2026 21:00" },
+                { id: "P92", equipo1: "MEX", equipo2: "W80", fecha: "05/07/2026 21:00" },
                 { id: "P95", equipo1: "W86", equipo2: "W88", fecha: "07/07/2026 13:00" },
                 { id: "P96", equipo1: "W85", equipo2: "W87", fecha: "07/07/2026 17:00" }
             ]
