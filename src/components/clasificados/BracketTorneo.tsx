@@ -165,7 +165,7 @@ const datosTorneo: EstructuraTorneo = {
                 { id: "P89", equipo1: "PAR", equipo2: "W77", fecha: "04/07/2026 18:00" },
                 { id: "P90", equipo1: "CAN", equipo2: "MAR", fecha: "04/07/2026 14:00" },
                 { id: "P93", equipo1: "W83", equipo2: "W84", fecha: "06/07/2026 16:00" },
-                { id: "P94", equipo1: "W81", equipo2: "W82", fecha: "06/07/2026 21:00" }
+                { id: "P94", equipo1: "W81", equipo2: "BEL", fecha: "06/07/2026 21:00" }
             ]
         },
         {
@@ -209,7 +209,7 @@ const datosTorneo: EstructuraTorneo = {
             ronda: "Octavos de final",
             partidos: [
                 { id: "P91", equipo1: "BRA", equipo2: "NOR", fecha: "05/07/2026 17:00" },
-                { id: "P92", equipo1: "MEX", equipo2: "W80", fecha: "05/07/2026 21:00" },
+                { id: "P92", equipo1: "MEX", equipo2: "ENG", fecha: "05/07/2026 21:00" },
                 { id: "P95", equipo1: "W86", equipo2: "W88", fecha: "07/07/2026 13:00" },
                 { id: "P96", equipo1: "W85", equipo2: "W87", fecha: "07/07/2026 17:00" }
             ]
@@ -319,7 +319,7 @@ const BracketTorneo: React.FC = () => {
                                     borderRadius: '3px',
                                     marginBottom: '2px'
                                 }}>
-                                    <span style={{ marginRight: '4px', fontSize: '0.6rem' }}>{obtenerBandera(partido.equipo1)}</span>
+                                    <span style={{ marginRight: '4px', fontSize: 14 }}>{obtenerBandera(partido.equipo1)}</span>
                                     {partido.equipo1}
                                 </div>
 
@@ -332,7 +332,7 @@ const BracketTorneo: React.FC = () => {
                                     backgroundColor: `${obtenerColor(partido.equipo2)}15`,
                                     borderRadius: '3px'
                                 }}>
-                                    <span style={{marginRight: '4px', fontSize: '0.6rem' }}>{obtenerBandera(partido.equipo2)}</span>
+                                    <span style={{marginRight: '4px', fontSize: 14 }}>{obtenerBandera(partido.equipo2)}</span>
                                     {partido.equipo2}
                                 </div>
 
